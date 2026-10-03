@@ -1,0 +1,10 @@
+<div *ngIf="character">
+    <h2>{{ character.name }}</h2>
+    <img [src]="character.image" [alt]="character.name" style="width: 100px;">
+    <p><strong>Race:</strong> {{ character.race }}</p>
+    <p><strong>Gender:</strong> {{ character.gender }}</p>
+    <p><strong>Ki:</strong> {{ character.ki }}</p>
+    <p><strong>Max Ki:</strong> {{ character.maxKi }}</p>
+    <p><strong>Affiliation:</strong> {{ character.affiliation }}</p>
+    <p><strong>Description:</strong> {{ character.description }}</p>
+  </div>

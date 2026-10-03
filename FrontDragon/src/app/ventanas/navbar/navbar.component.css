@@ -1,0 +1,45 @@
+mat-toolbar-row {
+    background-color: black;
+}
+
+mat-toolbar {
+    height: 50px;
+    background-color: black;
+}
+
+
+#home {
+    height: 50px;
+    width: 170px;
+    color: white;
+    background-color: black;
+}
+
+#lista-personajes {
+    height: 50px;
+    width: 80px;
+    color: white;
+    background-color: black;
+}
+
+#login {
+    border: none;
+    outline: none;
+    height: 50px;
+    color: white;
+    background-color: black;
+    margin-left: 1020px;
+}
+
+#logout {
+    border: none;
+    outline: none;
+    height: 50px;
+    color: white;
+    background-color: black;
+    margin-left: 850px;
+}
+
+mat-icon {
+    margin-right: 3px;
+}

@@ -1,0 +1,35 @@
+<ng-container>
+
+  <input id="buscador" type="text" [(ngModel)]="filterText" (input)="filterCharacters()" placeholder="Buscar por nombre..."
+    class="form-control mb-3" />
+    
+<div class="container">
+  <div class="row">
+    <h3><b>Dragon Ball Characters</b></h3>
+    <table class="table table-striped">
+      <thead class="table-light">
+        <tr>
+          <th>ID</th>
+          <th>Image</th>
+          <th>Name</th>
+          <th>Race</th>
+          <th>Favorito</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let character of filteredCharacters">
+            <td>{{ character.id }}</td>
+            <td><img [src]="character.image" (click)="goToDetalles(character.id)"
+              alt="{{ character.name }}" style="cursor: pointer; width: 50px; height: auto;"></td>
+            <td>{{ character.name }}</td>
+            <td>{{ character.race }}</td>
+            <td><input type="checkbox" [checked]="isFavorite(character)"
+                (change)="toggleFavorite(character)"></td>
+          </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+</ng-container>
+

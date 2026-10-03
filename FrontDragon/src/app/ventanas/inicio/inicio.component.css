@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+    background: url('/assets/imagenes/inicio.png') no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+.welcome-container {
+    text-align: center;
+    padding: 20px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    border-radius: 10px;
+}
+h1 {
+    color: #333;
+}
+p {
+    color: black;
+}

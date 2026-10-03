@@ -1,0 +1,26 @@
+<div class="container">
+    <h3><b>Personajes Favoritos: </b><h2>{{favoriteCount}}</h2></h3>
+    <table class="table table-striped">
+        <thead class="table-light">
+            <tr>
+                <th>ID</th>
+                <th>Image</th>
+                <th>Name</th>
+                <th>Race</th>
+                <th>Favoritos</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let character of favoriteCharacters">
+                <td>{{ character.id }}</td>
+                <td><img [src]="character.image" (click)="goToDetalles(character.id)"
+                     alt="{{ character.name }}" style="cursor: pointer; width: 50px; height: auto;"></td>
+                <td>{{ character.name }}</td>
+                <td>{{ character.race }}</td>
+                <td><input type="checkbox" [checked]="isFavorite(character)" (change)="toggleFavorite(character)" />
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>

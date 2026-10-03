@@ -1,0 +1,37 @@
+<body>
+  <div class="wrapper">
+      <form [formGroup]="registerForm">
+          <p class="text-danger">{{registerError}}</p>
+          <h1>Registro</h1>
+
+          <div class="input-box">
+              <input type="email" placeholder="Email" formControlName="username" class="form-control" required>
+              <div *ngIf="email.invalid && (email.dirty || email.touched)" class="text-danger">
+                <div *ngIf="email.errors?.['required']">
+                  El email es requerido.
+                </div>
+                <div *ngIf="email.errors?.['email']">
+                  Un formato valido: user&#64;gmail.com.
+                </div>
+              </div>
+              <i class='bx bxs-user'></i>
+          </div>
+
+          <div class="input-box">
+              <input type="password" placeholder="Password" formControlName="password" class="form-control" required>
+              <div *ngIf="password.invalid && (password.dirty || password.touched)" class="text-danger">
+                <div *ngIf="password.errors?.['required']">
+                  El password es requerido.
+                </div>
+              </div>
+              <i class='bx bxs-lock-alt' ></i>
+          </div>
+  
+          <button type="submit" (click)="register()" class="btn btn-primary">Aceptar</button>
+  
+          <div class="register-link">
+              <p>Tienes ya una cuenta? <a href="login">Login</a></p>
+          </div>
+      </form>
+  </div>
+</body>

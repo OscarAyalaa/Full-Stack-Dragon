@@ -1,0 +1,13 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <button mat-button id="home" routerLink="/inicio"><mat-icon>home</mat-icon>Home</button>
+        <button mat-button id="lista-favoritos" routerLink="/lista-personajes" *ngIf="authService.isAuthenticated()"><mat-icon>person</mat-icon>Personajes</button>
+        <button mat-button id="lista-personajes" routerLink="/lista-favoritos" *ngIf="authService.isAuthenticated()"><mat-icon>star_border</mat-icon>Favoritos</button>
+        <button mat-button id="login" routerLink="/login" *ngIf="!authService.isAuthenticated()"><mat-icon>account_box</mat-icon>Login</button>
+        <!--<a routerLink="/register" *ngIf="!authService.isAuthenticated()">Register</a> -->
+        <button mat-button id="logout" (click)="logout()" *ngIf="authService.isAuthenticated()"><mat-icon>exit_to_app</mat-icon>Logout</button>
+        <!-- <button (click)="logout()" *ngIf="authService.isAuthenticated()">Logout</button> -->
+    </mat-toolbar-row>
+</mat-toolbar>
+
+<router-outlet></router-outlet>
